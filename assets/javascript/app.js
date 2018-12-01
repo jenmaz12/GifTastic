@@ -9,7 +9,7 @@ $(document).ready(function() {
             // create new button
             var a= $("<button>");
             // add bootstrap button class
-            a.addClass("btn btn-info mr-2");
+            a.addClass("btn btn-info m-2");
             
             // add attribute of data-name equal to the item in the array
             a.attr("data-name",topics[i]);
