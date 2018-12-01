@@ -9,8 +9,8 @@ $(document).ready(function() {
             // create new button
             var a= $("<button>");
             // add bootstrap button class
-            a.addClass("btn");
-            a.addClass("btn-info");
+            a.addClass("btn btn-info mr-2");
+            
             // add attribute of data-name equal to the item in the array
             a.attr("data-name",topics[i]);
             // set button text equal to the item in the array
@@ -20,6 +20,7 @@ $(document).ready(function() {
         }
     }
     
+    // call renderButtons function
     renderButtons();
 });
 
