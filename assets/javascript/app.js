@@ -24,7 +24,7 @@ $(document).ready(function() {
     // call renderButtons function
     renderButtons();
 
-    $(".animal").on("click", function displayGifs(){
+    $(document).on("click", ".animal", function (){
         $("#gifs-appear-here").empty();
         var name = $(this).attr("data-name");
 
@@ -91,6 +91,7 @@ $(document).ready(function() {
         var newanimal = $("#addAnimal").val().trim();
         topics.push(newanimal);
         renderButtons();
+        $("#addAnimal").empty();
     })
 });
 
