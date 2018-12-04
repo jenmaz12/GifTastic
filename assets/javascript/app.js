@@ -52,9 +52,12 @@ $(document).ready(function() {
                 // Giving the image tag an src attribute of a proprty pulled off the
                 // result item
                 animalImage.attr("src", results[i].images.fixed_height_still.url);
+                // adding data-state attribute
                 animalImage.attr("data-state", "still");
+                // adding data-still and data-animate attributes for the pause effect
                 animalImage.attr("data-still",results[i].images.fixed_height_still.url);
                 animalImage.attr("data-animate",results[i].images.fixed_height.url);
+                animalImage.addClass("animal-gif");
 
                 // Appending the paragraph and animalImage we created to the "gifDiv" div we created
                 gifDiv.append(animalImage);
@@ -62,9 +65,23 @@ $(document).ready(function() {
 
                 // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
                 $("#gifs-appear-here").prepend(gifDiv);
-
             }
         })
+        
+        
     })
+    $(".animal-gif").on("click", function(){
+        var state = $(this).attr("data-state");
+
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+        }
+        else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }    
+    });
+    
 });
 
