@@ -92,6 +92,7 @@ $(document).ready(function() {
         topics.push(newanimal);
         renderButtons();
         $("#addAnimal").empty();
+        $("form").trigger("reset");
     })
 });
 
