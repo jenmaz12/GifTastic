@@ -13,6 +13,7 @@ $(document).ready(function() {
             a.addClass("animal");
             // add attribute of data-name equal to the item in the array
             a.attr("data-name",topics[i]);
+            
             // set button text equal to the item in the array
             a.text(topics[i]);
             // append new button to buttons div
@@ -51,6 +52,9 @@ $(document).ready(function() {
                 // Giving the image tag an src attribute of a proprty pulled off the
                 // result item
                 animalImage.attr("src", results[i].images.fixed_height_still.url);
+                animalImage.attr("data-state", "still");
+                animalImage.attr("data-still",results[i].images.fixed_height_still.url);
+                animalImage.attr("data-animate",results[i].images.fixed_height.url);
 
                 // Appending the paragraph and animalImage we created to the "gifDiv" div we created
                 gifDiv.append(animalImage);
