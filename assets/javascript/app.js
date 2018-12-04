@@ -24,7 +24,7 @@ $(document).ready(function() {
     // call renderButtons function
     renderButtons();
 
-    $(".animal").on("click", function(){
+    $(".animal").on("click", function displayGifs(){
         $("#gifs-appear-here").empty();
         var name = $(this).attr("data-name");
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
                 animalImage.attr("data-still",results[i].images.fixed_height_still.url);
                 animalImage.attr("data-animate",results[i].images.fixed_height.url);
                 animalImage.addClass("animal-gif");
-
+            
                 // Appending the paragraph and animalImage we created to the "gifDiv" div we created
                 gifDiv.append(animalImage);
                 gifDiv.append(p);
@@ -66,11 +66,12 @@ $(document).ready(function() {
                 // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
                 $("#gifs-appear-here").prepend(gifDiv);
             }
+            
         })
         
         
     })
-    $(".animal-gif").on("click", function(){
+    $(document).on("click", ".animal-gif", function(){
         var state = $(this).attr("data-state");
 
         if (state === "still") {
@@ -80,8 +81,16 @@ $(document).ready(function() {
         else {
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
-          }    
+          }  
+            
     });
     
+    $("#submit").on("click", function(event){
+        event.preventDefault();
+
+        var newanimal = $("#addAnimal").val().trim();
+        topics.push(newanimal);
+        renderButtons();
+    })
 });
 
