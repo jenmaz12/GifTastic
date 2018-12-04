@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var topics = ["dogs","cats","mouse","moose","duck","horse","lion","giraffe","hamster","hippo","cow","chicken","pig"];
+    var topics = ["dogs","cats","mouse","duck","horse","lion","giraffe","hamster","hippo","cow","chicken","pig"];
 
     function renderButtons() {
         // empty buttons div to prevent duplicates
