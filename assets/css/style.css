@@ -4,7 +4,9 @@
 }
 #form {
     display: inline-block;
-    float: right}
+    float: right;
+    margin-left: 3px;
+}
 
 #smallscreen {
     width: 100%;
