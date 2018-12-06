@@ -6,11 +6,16 @@
     display: inline-block;
     float: right}
 
-#gifs-appear-here {
-    display: inline-block;
-    float: right;
-    }
+#smallscreen {
+    width: 100%;
+}
+
 
 @media screen and (max-width:640px) {
-    
+    #form {
+        clear: both;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 3px;
+    }
 }

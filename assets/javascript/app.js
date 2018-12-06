@@ -1,4 +1,14 @@
 $(document).ready(function() {
+    
+    $(window).resize(function(){
+        var viewportWidth = $(window).width();
+        if (viewportWidth < 640) {
+            $("#gifs-appear-here").removeClass("col-sm-8");
+            $("#form").removeClass("col-sm-4");
+            $("#smallscreen").addClass("col-sm-12");
+        }
+    })
+    
     var topics = ["dogs","cats","mouse","duck","horse","lion","giraffe","hamster","hippo","cow","chicken","pig"];
 
     function renderButtons() {
