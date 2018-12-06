@@ -2,9 +2,15 @@
     display: inline-block;
     margin: 3px;
 }
+#form {
+    display: inline-block;
+    float: right}
 
-/* #gifs-appear-here {
-float: left;} */
+#gifs-appear-here {
+    display: inline-block;
+    float: right;
+    }
 
-/* #form {
-clear: both;} */
+@media screen and (max-width:640px) {
+    
+}
